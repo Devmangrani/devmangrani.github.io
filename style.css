@@ -1,0 +1,490 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+
+}
+ 
+.logo{
+    width: 50px;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+.logo-text{
+    
+    font-size: 30px;
+}
+.nav-items{
+    display: flex;
+    gap: 4rem;
+    padding:0 4rem;
+    font-size: medium;
+}
+.nav-items div{
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.9s linear;
+    cursor: pointer;
+}
+.nav-items div a{
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+.nav-items div:hover{
+    font-weight: bolder;
+    
+}
+.hero-section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 5rem;
+    padding-bottom: 8rem;
+    margin: 4rem auto;
+}
+.faded-text{
+    user-select: none;
+    font-size: 7em;
+    color: rgb(221, 204, 204);
+    bottom: -16%;
+    left: -5%;
+    font-weight: bolder;
+    transition: all 3s;
+    position: absolute;
+}
+.hero-section-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.hero-section-heading{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+.role{
+    color: purple;
+    font-weight: 800;
+}
+.hero-section-sub-heading{
+    font-size: 45px;
+    line-height: 45px;
+}
+.hero-section-description{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+.btn-red{
+    background-color: whitesmoke;
+    width: fit-content;
+    color: rgb(5, 2, 28);
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+}
+.btn-red::before{
+    content: "";
+    position: absolute;
+    background-color: #e12131;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+}
+.btn-red:hover::before{
+    transform: scaleX(1);
+}
+.btn-red:hover{
+    border: solid 3px ;
+    color: black;
+}
+.btn-bottom{
+    display: none;
+}
+
+.user-image{
+    height: 400px;
+    width: 500px;
+ }
+.project-section{
+    background-color: rgb(231,231,231);
+    margin-top: 4rem;
+
+ }
+ #project{
+    scroll-behavior: smooth;
+ }
+ .page-header{
+    color: red;
+    align-items: center;
+    font-size: 90px;
+    text-align: center;
+ }
+.project-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    scroll-behavior: smooth;
+
+}
+.project-card{
+    width: 90%;
+    height: 600px;
+    background-image: url(./Images/Hotel\ Website\ page.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0px 0px 40px black;
+}
+
+.project-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1f1f1f9a;
+    z-index: 0;
+    scroll-behavior: smooth;
+    
+}
+.project-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, #343d68 , #343d68be, #343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index: 1;
+}
+.project-card:hover::before{
+    transform: scaleX(1);
+}
+.project-number{
+    color: whitesmoke;
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    z-index: 10;
+    display: none;
+}
+.project-card:hover .project-number{
+    display: block;
+}
+.project-number-right{
+    right: -40px;
+    top: -45px;
+}
+.project-number-left{
+    left: -40px;
+    top: -45px;
+}
+.project-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+    bottom: 10%;
+    z-index: 5;
+    gap: 1rem;
+    transition: all 0.4s;
+}
+.project-content-left{
+    left: 10%;
+}
+.project-content-right{
+    right: 10%;
+}
+.project-skills-container{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+.project-skill{
+    width: 40px;
+}
+.project-heading{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+.project-subheading{
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+}
+.btn-grp{
+     display: flex;
+     gap: 0.9rem;
+     align-items: center;
+}
+.btn-project:hover{
+    border: none;
+}
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+}
+
+.icon:hover{
+    color: #000;
+}
+
+.project-content:hover{
+    transform: scale(1.1);
+}
+#Project1{
+    background-image: url(./Images/Hotel\ Website\ page.png);
+}
+#Project2{
+    margin-left: 120px;
+    background-image: url(./Images/Ecomerce\ Website\ page.png);
+}
+#Project3{
+    background-image: url(./Images/Traveling\ website.png);
+}
+#Project4{
+    margin-left: 120px;
+    background-image: url(./Images/Striming\ Website\ page.png);
+}
+.skills-container{
+    position: relative;
+    display: flex;
+    
+    padding: 5rem;
+    margin: 10rem auto;
+    gap: 30px;
+
+}
+.skills-container-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+.skills-container-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    position: relative;
+    gap: 2rem;
+    justify-content: center;
+}
+.skills-fade-text{
+    position: absolute;
+    font-size: 15em;
+    font-style: bold;
+    color: rgb(231,231,231);
+    bottom: -34.5%;
+    right: -12%;
+    user-select: none;
+    overflow: hidden;
+}
+.blob-style{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    bottom: 10%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    animation: blobAnimation 3s linear infinite;
+    width: 250px;
+    z-index: -5;
+
+}
+
+
+.skills-logo{
+    width: 100px;
+    transition: all 0.5s;
+}
+.skills-logo:hover{
+    transform: scale(1.5);
+}
+.skills-heading{
+    font-size: 50px;
+    font-style: bold; 
+      color: rgb(123, 34, 34);
+      line-height: 50px;
+}
+.caps{
+    font-size: 90px;
+}
+.skills-subheading{
+    margin-top: 1rem;
+    width: 85%;
+    text-align: justify;
+}
+.skills-subheading p{
+    margin: 20px;
+    font-size: 22px;
+     
+}
+
+  
+.blob-style {
+    animation: rotate 1s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+.contactus-form-container{
+    width: 100%;
+    background-color: rgb(231,231,231);
+}
+.contactus-heading{
+    font-size: 5rem;
+    color: rgb(123, 34, 34);
+    padding-top: 2rem;
+}
+.contactus-sub-heading{
+    font-size: 3rem;
+    color: #343d68aa;
+    text-transform: capitalize ;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+    margin: 2rem 5rem;
+}
+.contactus-form-container{
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+}
+.formfield-container{
+    width: 100%;
+}
+.formfield{
+    width: 100%;
+    height: 42px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px  #000;
+    font-weight: 500;
+    border: none;
+    margin: 17px;
+}
+.formfield-textarea{
+    height: auto;
+    padding-top: 1rem;
+
+}
+#submit-btn{
+    border: none;
+    font-size: 1.4rem;
+    margin: 1 rem 0;
+}
+#submit-btn:hover{
+    scale: 0.9;
+}
+.submit-icon{
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
+footer{
+    position: relative;
+    margin-top: -1px;
+    background-color: #343d68;
+    padding: 5rem;
+}
+
+.footer-faded-text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #535c87;
+    user-select: none;
+    font-size: 5rem;
+}
+.link-wrapper{
+    display: flex;
+    gap: 1.2rem;
+}
+.link-wrapper div a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.6s;
+
+}
+.link-wrapper div a:hover{
+    color:black;
+}
+.icon-wrapper{
+    display: flex;
+    gap: 2rem;
+    
+
+}
+
+
+.nav{
+    display: flex;
+    gap: 10rem;
+    padding: 3rem;
+    justify-content: space-around ;
+    align-items:center;
+    font-size: 40px;
+}
+.icon-footer{
+    display: flex;
+    gap: 6rem;
+    padding: 1.2rem;
+    justify-content: space-between ;
+    align-items: last baseline;
+}
