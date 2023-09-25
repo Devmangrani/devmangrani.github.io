@@ -279,18 +279,18 @@ a{
     transform: scale(1.1);
 }
 #Project1{
-    background-image: url(./Images/Hotel\ Website\ page.png);
+    background-image: url(./Images/weather.png);
 }
 #Project2{
     margin-left: 120px;
-    background-image: url(./Images/Ecomerce\ Website\ page.png);
+    background-image: url(./Images/PasswardGenerator.png);
 }
 #Project3{
-    background-image: url(./Images/Traveling\ website.png);
+    background-image: url(./Images/TicTacToe.png);
 }
 #Project4{
     margin-left: 120px;
-    background-image: url(./Images/Striming\ Website\ page.png);
+    background-image: url(./Images/A.I\ Image.png);
 }
 .skills-container{
     position: relative;
